@@ -56,4 +56,4 @@ class CommandLineArguments {
   }
 }
 
-export default new CommandLineArguments().build(process.argv);
+export default new CommandLineArguments();

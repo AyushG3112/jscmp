@@ -21,7 +21,8 @@
   ],
   "dependencies": {
     "arg": "^4.1.3",
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "json2csv": "^4.5.4"
   },
   "devDependencies": {},
   "repository": {

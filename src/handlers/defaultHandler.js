@@ -4,6 +4,13 @@ class DefaultHandler {
   }
 
   handle(input = []) {
+    if (!input.length) {
+      return;
+    }
+    if (input.length) {
+      console.log(`fileA: ${input[0].fileA}`);
+      console.log(`fileB: ${input[0].fileB}\n`);
+    }
     for (let item of input) {
       switch (item.type) {
         case "missing":
