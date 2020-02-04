@@ -17,7 +17,7 @@
   },
   "keywords": [
     "cli",
-    "create-project"
+    "jscmp"
   ],
   "dependencies": {
     "arg": "^4.1.3",
