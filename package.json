@@ -1,6 +1,6 @@
 {
   "name": "jscmp",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Compare two JSON/JS files to find the diff between their exported objects",
   "author": "Ayush Gupta <AyushG3112@gmail.com>",
   "license": "ISC",
