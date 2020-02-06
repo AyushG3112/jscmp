@@ -32,7 +32,6 @@ function comparer(
     });
   }
   for (let key of common) {
-    console.log(key);
     if (getType(dataA[key]) !== getType(dataB[key])) {
       outputArray.push({
         type: "typeMismatch",
