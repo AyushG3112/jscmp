@@ -8,7 +8,7 @@ function comparer(
 ) {
   const keysA = Object.keys(dataA);
   const keysB = Object.keys(dataB);
-  const common = getArrayIntersection(keysA, keysB)
+  const common = getArrayIntersection(keysA, keysB);
   const aDiff = getArrayDiff(keysA, keysB);
   const bDiff = getArrayDiff(keysB, keysA);
   for (let key of aDiff) {
@@ -32,10 +32,8 @@ function comparer(
     });
   }
   for (let key of common) {
-    if (
-      getType(dataA[key]) !==
-      getType(dataB[key])
-    ) {
+    console.log(key);
+    if (getType(dataA[key]) !== getType(dataB[key])) {
       outputArray.push({
         type: "typeMismatch",
         field: parent + key,
@@ -44,9 +42,7 @@ function comparer(
         fileB,
         typeB: getType(dataB[key])
       });
-    } else if (
-      getType(dataA[key]) == "[object Object]"
-    ) {
+    } else if (getType(dataA[key]) == "object") {
       comparer(
         { fileA, dataA: dataA[key] },
         { fileB, dataB: dataB[key] },

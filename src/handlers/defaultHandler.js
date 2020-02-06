@@ -14,13 +14,17 @@ class DefaultHandler {
     for (let item of input) {
       switch (item.type) {
         case "missing":
+          let missingIn = "fileA";
+          if (item.typeB === "undefined") {
+            missingIn = "fileB";
+          }
           console.log(
-            `Field: ${item.field} missing.\nType in fileA: ${item.typeA}.\nType in fileB: ${item.typeB}.\n`
+            `Field: ${item.field} missing in ${missingIn}.`
           );
           break;
         case "typeMismatch":
           console.log(
-            `Field: ${item.field} has different types in both files.\nType in fileA: ${item.typeA}.\nType in fileB: ${item.typeB}.\n`
+            `\nField: ${item.field} has different types in both files.\nType in fileA: ${item.typeA}.\nType in fileB: ${item.typeB}.\n`
           );
           break;
       }
